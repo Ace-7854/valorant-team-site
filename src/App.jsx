@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 import Navbar from './assets/Navbar'
+
+import HomePage from './pages/home'
+import AboutPage from './pages/about'
+import RosterPage from './pages/roster'
+
 import './App.css'
 
 function App() {
@@ -11,8 +17,9 @@ function App() {
   <Router>
     <Navbar/>
     <Routes>
-      <Route path="/" element={<h1>Home</h1>} />
-      <Route path="/about" element={<h1>About</h1>} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/roster" element={<RosterPage />} />
     </Routes>
   </Router>
   </>

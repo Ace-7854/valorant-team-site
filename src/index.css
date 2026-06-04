@@ -1,111 +1,139 @@
+/* Color Palette Variables */
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  --bg-deep-obsidian: #0a0f18;   /* Deepest midnight blue background */
+  --bg-surface-glass: rgba(16, 26, 43, 0.75); /* Frosted glass nav surface */
+  --border-slate-blue: rgba(56, 139, 253, 0.15); /* Soft, glowing blue border */
+  
+  --accent-cyan: #00f2fe;        /* High-tech primary cyan glow */
+  --accent-electric: #0072ff;    /* Deep pairing blue for gradients */
+  
+  --text-pure: #ffffff;
+  --text-muted: #8fa0ba;         /* Muted blue-gray for clean hierarchy */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 body {
-  margin: 0;
+  background-color: var(--bg-deep-obsidian);
+  color: var(--text-pure);
+  overflow-x: hidden;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
+/* Hyper-Modern Navbar Container */
+.navbar {
   display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 4rem;
+  
+  /* Glassmorphism Effect */
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  border-bottom: 1px solid var(--border-slate-blue);
+  
+  /* Locks it to top while scrolling */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+/* Branding Typography */
+.nav-brand a {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: var(--text-pure);
+  text-transform: uppercase;
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
+.nav-brand span {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-electric));
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
+  margin-left: 2px;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
+/* Navigation Links Setup */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.25s ease;
+}
+
+/* Animated Underline Effect for Links on Hover */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 10px var(--accent-cyan);
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-pure);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Minimalist Cyan CTA Button */
+.cta-button {
+  background: transparent;
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+  padding: 0.6rem 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
   border-radius: 4px;
-  color: var(--text-h);
+  transition: all 0.3s ease;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.cta-button:hover {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-electric));
+  color: var(--bg-deep-obsidian);
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+  transform: translateY(-1px);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 40px;      /* Restricts the logo height perfectly to your nav bar */
+  width: auto;        /* Keeps the logo proportions perfect without stretching */
+  object-fit: contain;
 }

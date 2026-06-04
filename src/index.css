@@ -137,3 +137,348 @@ body {
   width: auto;        /* Keeps the logo proportions perfect without stretching */
   object-fit: contain;
 }
+
+/* Roster Layout & Typography */
+.roster-page {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.roster-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.roster-header h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.roster-header h1 span {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-electric));
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
+}
+
+.roster-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Structural Tables Layout */
+.roster-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.roster-section h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.roster-section h2 span {
+  color: var(--accent-cyan);
+}
+
+.table-wrapper {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-slate-blue);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.roster-table th {
+  background: rgba(16, 26, 43, 0.9);
+  padding: 1.2rem 1.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-slate-blue);
+}
+
+.roster-table td {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid rgba(56, 139, 253, 0.05);
+  font-size: 1rem;
+}
+
+/* Differentiating Starters and Substitutes styling */
+.roster-table tr.substitute td {
+  opacity: 0.65; /* Makes benches visually distinct without hiding them */
+}
+
+.player-name {
+  font-weight: 700;
+  color: var(--text-pure);
+  letter-spacing: 0.5px;
+}
+
+.player-role {
+  color: #d1dbec;
+}
+
+/* Modern Status Badges */
+.status-tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-tag.starter {
+  background: rgba(0, 242, 254, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.05);
+}
+
+.status-tag.substitute {
+  background: rgba(143, 160, 186, 0.1);
+  color: var(--text-muted);
+  border: 1px solid rgba(143, 160, 186, 0.2);
+}
+
+/* Row Hover Highlights */
+.roster-table tbody tr:hover {
+  background: rgba(56, 139, 253, 0.04);
+}
+
+/* Table Logo and Header Alignment */
+.roster-team-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;         /* Space between logo and text */
+  margin-bottom: 1.5rem;
+}
+
+.team-table-logo {
+  height: 50px;         /* Uniform size for team badges */
+  width: auto;
+  object-fit: contain;
+  
+  /* Adds a premium subtle glow behind your logos matching your theme */
+  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.25));
+}
+
+/* Clear margins on the h2 now that it is inside a flex wrapper */
+.roster-team-heading h2 {
+  margin-bottom: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Layout container for elements on the Home page */
+.socials-layout {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* The isolated Twitter Card element container */
+.twitter-card {
+  flex: 1;
+  max-width: 500px;
+}
+
+.feed-header {
+  margin-bottom: 1.5rem;
+}
+
+.feed-header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.feed-header h2 span {
+  color: var(--accent-cyan);
+}
+
+.feed-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Glass frame styling specifically around the X script wrapper */
+.twitter-frame {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-slate-blue);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  height: 650px;
+  overflow-y: auto;
+}
+
+/* Clean stacking for mobile/smaller tablet windows */
+@media (max-width: 768px) {
+  .socials-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .twitter-card {
+    width: 100%;
+  }
+}
+
+/* Direct wrapper over the iframe script */
+.twitter-frame.crop-to-latest {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-slate-blue);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  
+  /* CRITICAL CORRECTION: Restricts the frame size to a typical single post footprint */
+  height: 480px;
+  overflow: hidden; /* Strips out any internal scroll tracking or secondary posts */
+  position: relative;
+}
+
+/* Force standard inner scroll view configurations inside the iframe shell to flatten out */
+.twitter-frame.crop-to-latest iframe {
+  max-height: 450px !important;
+  pointer-events: auto; /* Keeps links and media play controls active on the post */
+}
+
+/* Container for elements on the Home page grid */
+.socials-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* The isolated Instagram Card element container */
+.instagram-card {
+  flex: 1;
+  max-width: 500px;
+}
+
+.feed-header {
+  margin-bottom: 1.5rem;
+}
+
+.feed-header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.feed-header h2 span {
+  color: var(--accent-cyan);
+}
+
+.feed-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Glass frame styling specifically around the Instagram iframe shell */
+.instagram-frame {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-slate-blue);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  height: 580px;
+  overflow: hidden;
+}
+
+/* Fixes background color blend from Instagram's native white layout */
+.instagram-frame iframe {
+  background: #ffffff !important; 
+}
+
+/* Stack layout nicely on mobile layouts */
+@media (max-width: 768px) {
+  .socials-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .instagram-card {
+    width: 100%;
+  }
+}
+
+/* Container that forces elements to sit side-by-side */
+.socials-layout {
+  display: flex;
+  justify-content: center; /* Centers both blocks on the screen */
+  align-items: flex-start; /* Ensures they align perfectly at the top edge */
+  gap: 3rem;               /* Creates a premium, clean gap between both cards */
+  max-width: 1200px;       /* Keeps the dashboard from stretching too wide on massive monitors */
+  margin: 3rem auto;       /* Spacing on the top/bottom, auto handles horizontal centering */
+  padding: 0 2rem;         /* Prevents elements from touching the screen edges on smaller layouts */
+}
+
+/* Forces both the Twitter and Instagram card elements to share the space equally */
+.twitter-card, 
+.instagram-card {
+  flex: 1;                 /* Gives them an exact 50/50 split width wise */
+  max-width: 500px;        /* Keeps the social frames tight, crisp, and readable */
+}
+
+/* Enforces uniform styling across both of your frame boxes */
+.twitter-frame,
+.instagram-frame {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-slate-blue);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  
+  /* Matches their heights perfectly so they look aligned and professional */
+  height: 580px;           
+  overflow: hidden;
+}
+
+/* RESPONSIVE RESPONSIVENESS:
+   If a user views your site on a mobile phone, they won't fit side-by-side. 
+   This media query automatically stacks them back into a neat vertical line on small screens. */
+@media (max-width: 900px) {
+  .socials-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .twitter-card, 
+  .instagram-card {
+    width: 100%;
+    max-width: 550px; /* Lets them take up comfortable room on mobile layouts */
+  }
+}

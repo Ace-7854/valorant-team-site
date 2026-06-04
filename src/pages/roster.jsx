@@ -1,7 +1,9 @@
+import Roster from "../assets/RosterTable";
+
 export default function RosterPage() {
     return (
         <>
-            <h1>Roster</h1>
+            <Roster />
         </>
     )
 }

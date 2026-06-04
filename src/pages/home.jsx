@@ -5,7 +5,7 @@ export default function HomePage() {
     return (
     <main className="home-content">
       <section className="socials-layout">
-        <TwitterFeed />
+        {/* <TwitterFeed /> */}
         <InstagramFeed />
       </section>
     </main>

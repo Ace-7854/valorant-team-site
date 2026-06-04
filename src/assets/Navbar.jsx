@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import aqMainLogo from '../assets/images/AQ_MAIN_LOGO.png';
+import aqBlueLogo from '../assets/images/AQ_BLUE_LOGO.png';
 
 export default function Navbar() {
     return (
@@ -7,7 +9,7 @@ export default function Navbar() {
             <div className="nav-brand">
                 <Link to="/">
                     <figure className="logo-container">
-                        <img src="/src/assets/images/AQ_MAIN_LOGO.png" alt="VLRNT Team Logo" />
+                        <img src={aqMainLogo} alt="VLRNT Team Logo" />
                     </figure>
                 </Link>
             </div>

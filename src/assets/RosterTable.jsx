@@ -1,4 +1,6 @@
 import React from 'react';
+import aqMainLogo from '../assets/images/AQ_MAIN_LOGO.png';
+import aqBlueLogo from '../assets/images/AQ_BLUE_LOGO.png';
 
 export default function Roster() {
   // Array data for AQ Main
@@ -35,7 +37,7 @@ export default function Roster() {
         <section className="roster-section">
           <div className="roster-team-heading">
             {/* Replace src with your main team logo path */}
-            <img src="/src/assets/images/AQ_MAIN_LOGO.png" alt="AQ Main Logo" className="team-table-logo" />
+            <img src={aqMainLogo} alt="AQ Main Logo" className="team-table-logo" />
             <h2>AQ <span>Main Team</span></h2>
           </div>
 
@@ -69,7 +71,7 @@ export default function Roster() {
         <section className="roster-section">
           <div className="roster-team-heading">
             {/* Replace src with your blue team logo path */}
-            <img src="/src/assets/images/AQ_BLUE_LOGO.png" alt="AQ Blue Logo" className="team-table-logo" />
+            <img src={aqBlueLogo} alt="AQ Blue Logo" className="team-table-logo" />
             <h2>AQ <span>Blue (AQB)</span></h2>
           </div>
           <div className="table-wrapper">

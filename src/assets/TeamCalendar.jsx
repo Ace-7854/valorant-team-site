@@ -8,7 +8,7 @@ export default function TeamCalendar() {
       team: "AQ Blue",
       type: "Tournament",
       title: "SNS Tourney AQB V TACT1K",
-      date: "Tuesday, June 5",
+      date: "Friday, June 5",
       time: "18:00 GMT +1",
       status: "Upcoming"
     },
@@ -17,7 +17,7 @@ export default function TeamCalendar() {
       team: "AQ Main",
       type: "Tournament",
       title: "SNS Tourney AQ V INVIGR-8 Esports",
-      date: "Thursday, June 6",
+      date: "Saturday, June 6",
       time: "18:00 GMT +1",
       status: "Upcoming"
     },
@@ -26,7 +26,7 @@ export default function TeamCalendar() {
       team: "AQ Blue",
       type: "Tournament",
       title: "SNS Tourney AQB V PRESA",
-      date: "Friday, June 7",
+      date: "Sunday, June 7",
       time: "18:00 GMT +1",
       status: "Upcoming"
     },
@@ -35,7 +35,7 @@ export default function TeamCalendar() {
       team: "AQ Main",
       type: "Tournament",
       title: "SNS Tourney AQ V Cesium Esports",
-      date: "Saturday, June 10",
+      date: "Wednesday, June 10",
       time: "18:00 GMT +1",
       status: "Upcoming"
     }

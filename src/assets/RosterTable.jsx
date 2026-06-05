@@ -5,13 +5,13 @@ import aqBlueLogo from '../assets/images/AQ_BLUE_LOGO.png';
 export default function Roster() {
   // Array data for AQ Main
   const mainRoster = [
-    { name: "AQ // Rhetti", role: "IGL/Flex", status: "Starter" },
+    { name: "AQ // rhetti", role: "IGL/Flex", status: "Starter" },
     { name: "AQ // Quiet", role: "Duelist/Ini", status: "Starter" },
-    { name: "AQ // Mik", role: "Controller / Omen", status: "Starter" },
+    { name: "AQ // Mik", role: "Controller", status: "Starter" },
     { name: "AQ // Suop", role: "Duelist", status: "Starter" },
-    { name: "AQ // Mathew", role: "Sentinel", status: "Starter" },
+    { name: "AQ // Tubeboy", role: "Sentinel", status: "Starter" },
     { name: "AQ // Nightmare", role: "Flex", status: "Substitute" },
-    { name: "AQ // Bella", role: "Flex", status: "Substitute" },
+    { name: "AQ // Kazemi", role: "Flex", status: "Substitute" },
   ];
 
   // Array data for AQ Blue

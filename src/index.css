@@ -723,3 +723,27 @@ body {
   text-transform: uppercase;
   color: var(--text-muted);
 }
+
+/* YouTube Card Wrapper */
+.youtube-card {
+  flex: 1;
+  max-width: 550px;
+}
+
+/* The video box frame */
+.youtube-frame {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-slate-blue);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  height: 315px; /* Keeps standard 16:9 widescreen proportions crisp */
+  overflow: hidden;
+}
+
+/* Make sure the internal iframe fills out the glass shell perfectly */
+.youtube-frame iframe {
+  border-radius: 8px;
+}

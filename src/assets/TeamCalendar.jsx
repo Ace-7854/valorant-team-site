@@ -35,8 +35,8 @@ export default function TeamCalendar() {
       team: "AQ Main",
       type: "Tournament",
       title: "SNS Tourney AQ V Cesium Esports",
-      date: "Saturday, June 13",
-      time: "20:00 GMT +1",
+      date: "Saturday, June 10",
+      time: "18:00 GMT +1",
       status: "Upcoming"
     }
   ];

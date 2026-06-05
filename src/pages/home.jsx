@@ -1,5 +1,6 @@
 import TwitterFeed from "../assets/TwitterFeed"
 import InstagramFeed from "../assets/InstagramFeed";
+import Calendar from "../assets/TeamCalendar";
 
 export default function HomePage() {
     return (
@@ -7,6 +8,9 @@ export default function HomePage() {
       <section className="socials-layout">
         <TwitterFeed />
         <InstagramFeed />
+      </section>
+      <section className="socials-layout">
+        <Calendar />
       </section>
     </main>
     )

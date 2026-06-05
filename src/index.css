@@ -1,17 +1,20 @@
-/* Color Palette Variables */
+/* =============================================
+   COLOR PALETTE VARIABLES
+   ============================================= */
 :root {
-  --bg-deep-obsidian: #0a0f18;   /* Deepest midnight blue background */
-  --bg-surface-glass: rgba(16, 26, 43, 0.75); /* Frosted glass nav surface */
-  --border-slate-blue: rgba(56, 139, 253, 0.15); /* Soft, glowing blue border */
-  
-  --accent-cyan: #00f2fe;        /* High-tech primary cyan glow */
-  --accent-electric: #0072ff;    /* Deep pairing blue for gradients */
-  
+  --bg-deep-obsidian: #0a0f18;
+  --bg-surface-glass: rgba(16, 26, 43, 0.75);
+  --border-slate-blue: rgba(56, 139, 253, 0.15);
+  --accent-cyan: #00f2fe;
+  --accent-electric: #0072ff;
   --text-pure: #ffffff;
-  --text-muted: #8fa0ba;         /* Muted blue-gray for clean hierarchy */
+  --text-muted: #8fa0ba;
+  --navbar-height: 70px;
 }
 
-/* Base Reset */
+/* =============================================
+   BASE RESET
+   ============================================= */
 * {
   margin: 0;
   padding: 0;
@@ -25,28 +28,25 @@ body {
   overflow-x: hidden;
 }
 
-/* Hyper-Modern Navbar Container */
+/* =============================================
+   NAVBAR — DESKTOP
+   ============================================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 4rem;
-  
-  /* Glassmorphism Effect */
+  height: var(--navbar-height);
   background: var(--bg-surface-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  
   border-bottom: 1px solid var(--border-slate-blue);
-  
-  /* Locks it to top while scrolling */
   position: sticky;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
 }
 
-/* Branding Typography */
 .nav-brand a {
   font-size: 1.35rem;
   font-weight: 900;
@@ -58,12 +58,12 @@ body {
 
 .nav-brand span {
   background: linear-gradient(135deg, var(--accent-cyan), var(--accent-electric));
-  --webkit-background-clip: text;
-  --webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-left: 2px;
 }
 
-/* Navigation Links Setup */
 .nav-links {
   display: flex;
   list-style: none;
@@ -83,7 +83,6 @@ body {
   transition: color 0.25s ease;
 }
 
-/* Animated Underline Effect for Links on Hover */
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -96,15 +95,9 @@ body {
   transition: width 0.25s ease;
 }
 
-.nav-links a:hover {
-  color: var(--text-pure);
-}
+.nav-links a:hover { color: var(--text-pure); }
+.nav-links a:hover::after { width: 100%; }
 
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* Minimalist Cyan CTA Button */
 .cta-button {
   background: transparent;
   color: var(--accent-cyan);
@@ -117,6 +110,7 @@ body {
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .cta-button:hover {
@@ -133,256 +127,221 @@ body {
 }
 
 .logo-container img {
-  height: 40px;      /* Restricts the logo height perfectly to your nav bar */
-  width: auto;        /* Keeps the logo proportions perfect without stretching */
-  object-fit: contain;
-}
-
-/* Roster Layout & Typography */
-.roster-page {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.roster-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.roster-header h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-}
-
-.roster-header h1 span {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-electric));
-  --webkit-background-clip: text;
-  --webkit-text-fill-color: transparent;
-}
-
-.roster-header p {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
-/* Structural Tables Layout */
-.roster-container {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-.roster-section h2 {
-  font-size: 1.75rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
-}
-
-.roster-section h2 span {
-  color: var(--accent-cyan);
-}
-
-.table-wrapper {
-  background: var(--bg-surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-slate-blue);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.roster-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-.roster-table th {
-  background: rgba(16, 26, 43, 0.9);
-  padding: 1.2rem 1.5rem;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-muted);
-  border-bottom: 1px solid var(--border-slate-blue);
-}
-
-.roster-table td {
-  padding: 1.2rem 1.5rem;
-  border-bottom: 1px solid rgba(56, 139, 253, 0.05);
-  font-size: 1rem;
-}
-
-/* Differentiating Starters and Substitutes styling */
-.roster-table tr.substitute td {
-  opacity: 0.65; /* Makes benches visually distinct without hiding them */
-}
-
-.player-name {
-  font-weight: 700;
-  color: var(--text-pure);
-  letter-spacing: 0.5px;
-}
-
-.player-role {
-  color: #d1dbec;
-}
-
-/* Modern Status Badges */
-.status-tag {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.status-tag.starter {
-  background: rgba(0, 242, 254, 0.1);
-  color: var(--accent-cyan);
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  box-shadow: 0 0 10px rgba(0, 242, 254, 0.05);
-}
-
-.status-tag.substitute {
-  background: rgba(143, 160, 186, 0.1);
-  color: var(--text-muted);
-  border: 1px solid rgba(143, 160, 186, 0.2);
-}
-
-/* Row Hover Highlights */
-.roster-table tbody tr:hover {
-  background: rgba(56, 139, 253, 0.04);
-}
-
-/* Table Logo and Header Alignment */
-.roster-team-heading {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;         /* Space between logo and text */
-  margin-bottom: 1.5rem;
-}
-
-.team-table-logo {
-  height: 50px;         /* Uniform size for team badges */
+  height: 40px;
   width: auto;
   object-fit: contain;
-  
-  /* Adds a premium subtle glow behind your logos matching your theme */
-  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.25));
 }
 
-/* Clear margins on the h2 now that it is inside a flex wrapper */
-.roster-team-heading h2 {
-  margin-bottom: 0;
-  font-size: 1.75rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-/* Layout container for elements on the Home page */
-.socials-layout {
-  display: flex;
+/* =============================================
+   HAMBURGER MENU BUTTON (mobile only)
+   ============================================= */
+.hamburger {
+  display: none !important;
+  flex-direction: column;
   justify-content: center;
-  gap: 2.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* The isolated Twitter Card element container */
-.twitter-card {
-  flex: 1;
-  max-width: 500px;
-}
-
-.feed-header {
-  margin-bottom: 1.5rem;
-}
-
-.feed-header h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-bottom: 0.25rem;
-}
-
-.feed-header h2 span {
-  color: var(--accent-cyan);
-}
-
-.feed-header p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-/* Glass frame styling specifically around the X script wrapper */
-.twitter-frame {
-  background: var(--bg-surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
   border: 1px solid var(--border-slate-blue);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  height: 650px;
-  overflow-y: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px;
+  transition: border-color 0.2s ease;
 }
 
-/* Clean stacking for mobile/smaller tablet windows */
+.hamburger:hover {
+  border-color: var(--accent-cyan);
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-pure);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animated X when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-cta {
+  display: none;
+}
+
+/* =============================================
+   NAVBAR — MOBILE BREAKPOINT
+   ============================================= */
 @media (max-width: 768px) {
-  .socials-layout {
-    flex-direction: column;
-    align-items: center;
+  .navbar {
+    padding: 1rem 1.25rem;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 0;
   }
-  .twitter-card {
+
+  .nav-brand {
+    flex: 1;
+  }
+
+  /* Show hamburger, hide actions */
+  .hamburger {
+    display: flex !important;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  /* The links panel — hidden by default, slides down when .open is toggled via JS */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    border-top: 1px solid var(--border-slate-blue);
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
     width: 100%;
   }
-}
 
-/* Direct wrapper over the iframe script */
-.twitter-frame.crop-to-latest {
-  background: var(--bg-surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-slate-blue);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  .nav-links a {
+    display: block;
+    padding: 0.85rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(56, 139, 253, 0.06);
+    width: 100%;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  /* Show discord button inline at bottom of mobile menu */
+  .nav-links .mobile-cta {
+    display: block;
+    margin-top: 0.75rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    background: transparent;
+    color: var(--accent-cyan);
+    border: 1px solid var(--accent-cyan);
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links .mobile-cta:hover {
+    background: var(--accent-cyan);
+    color: var(--bg-deep-obsidian);
+  }
   
-  /* CRITICAL CORRECTION: Restricts the frame size to a typical single post footprint */
-  height: 480px;
-  overflow: hidden; /* Strips out any internal scroll tracking or secondary posts */
-  position: relative;
+  .nav-actions {
+    display: none;
+  }
 }
 
-/* Force standard inner scroll view configurations inside the iframe shell to flatten out */
-.twitter-frame.crop-to-latest iframe {
-  max-height: 450px !important;
-  pointer-events: auto; /* Keeps links and media play controls active on the post */
+/* =============================================
+   HOME PAGE LAYOUT
+   ============================================= */
+.home-content {
+  padding: 2rem 0;
 }
 
-/* Container for elements on the Home page grid */
+/* Two-column social cards grid */
 .socials-layout {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 2.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
 }
 
-/* The isolated Instagram Card element container */
-.instagram-card {
+/* Shared card wrappers */
+.twitter-card,
+.instagram-card,
+.calendar-card,
+.youtube-card {
   flex: 1;
-  max-width: 500px;
+  max-width: 550px;
+  min-width: 0; /* Prevents flex overflow */
 }
 
+/* Shared frame styling */
+.twitter-frame,
+.instagram-frame,
+.calendar-frame,
+.youtube-frame {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-slate-blue);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.twitter-frame,
+.instagram-frame,
+.calendar-frame {
+  height: 580px;
+  overflow: hidden;
+}
+
+.calendar-frame {
+  overflow-y: auto;
+}
+
+/* YouTube keeps 16:9 ratio */
+.youtube-frame {
+  height: 315px;
+}
+
+.youtube-frame iframe {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Twitter crop variant */
+.twitter-frame.crop-to-latest {
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+}
+
+.twitter-frame.crop-to-latest iframe {
+  max-height: 450px !important;
+  pointer-events: auto;
+}
+
+/* Feed header shared */
 .feed-header {
   margin-bottom: 1.5rem;
 }
@@ -394,229 +353,79 @@ body {
   margin-bottom: 0.25rem;
 }
 
-.feed-header h2 span {
-  color: var(--accent-cyan);
-}
+.feed-header h2 span { color: var(--accent-cyan); }
 
 .feed-header p {
   color: var(--text-muted);
   font-size: 0.95rem;
 }
 
-/* Glass frame styling specifically around the Instagram iframe shell */
-.instagram-frame {
-  background: var(--bg-surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-slate-blue);
-  border-radius: 12px;
-  padding: 1.25rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  height: 580px;
-  overflow: hidden;
-}
-
-/* Fixes background color blend from Instagram's native white layout */
+/* Instagram iframe fix */
 .instagram-frame iframe {
-  background: #ffffff !important; 
+  background: #ffffff !important;
 }
 
-/* Stack layout nicely on mobile layouts */
-@media (max-width: 768px) {
-  .socials-layout {
-    flex-direction: column;
-    align-items: center;
-  }
-  .instagram-card {
-    width: 100%;
-  }
-}
-
-/* Container that forces elements to sit side-by-side */
-.socials-layout {
-  display: flex;
-  justify-content: center; /* Centers both blocks on the screen */
-  align-items: flex-start; /* Ensures they align perfectly at the top edge */
-  gap: 3rem;               /* Creates a premium, clean gap between both cards */
-  max-width: 1200px;       /* Keeps the dashboard from stretching too wide on massive monitors */
-  margin: 3rem auto;       /* Spacing on the top/bottom, auto handles horizontal centering */
-  padding: 0 2rem;         /* Prevents elements from touching the screen edges on smaller layouts */
-}
-
-/* Forces both the Twitter and Instagram card elements to share the space equally */
-.twitter-card, 
-.instagram-card {
-  flex: 1;                 /* Gives them an exact 50/50 split width wise */
-  max-width: 500px;        /* Keeps the social frames tight, crisp, and readable */
-}
-
-/* Enforces uniform styling across both of your frame boxes */
-.twitter-frame,
-.instagram-frame {
-  background: var(--bg-surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-slate-blue);
-  border-radius: 12px;
-  padding: 1.25rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  
-  /* Matches their heights perfectly so they look aligned and professional */
-  height: 580px;           
-  overflow: hidden;
-}
-
-/* RESPONSIVE RESPONSIVENESS:
-   If a user views your site on a mobile phone, they won't fit side-by-side. 
-   This media query automatically stacks them back into a neat vertical line on small screens. */
+/* =============================================
+   HOME PAGE — RESPONSIVE
+   ============================================= */
 @media (max-width: 900px) {
   .socials-layout {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding: 0 1.25rem;
   }
-  
-  .twitter-card, 
-  .instagram-card {
+
+  .twitter-card,
+  .instagram-card,
+  .calendar-card,
+  .youtube-card {
     width: 100%;
-    max-width: 550px; /* Lets them take up comfortable room on mobile layouts */
+    max-width: 100%;
   }
-}
-/* About Page Specific Layout */
-.about-page {
-  padding: 4rem 2rem;
-  max-width: 900px; /* Kept slightly tighter than the home page for a clean, reading-friendly layout */
-  margin: 0 auto;
-}
 
-.about-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
+  /* Give frames a more sensible height on mobile */
+  .twitter-frame,
+  .instagram-frame {
+    height: 480px;
+  }
 
-.about-header h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-}
+  .calendar-frame {
+    height: auto;
+    max-height: 480px;
+  }
 
-.about-header h1 span {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-electric));
-  --webkit-background-clip: text;
-  --webkit-text-fill-color: transparent;
-}
+  .youtube-frame {
+    /* Maintain 16:9 aspect ratio on mobile */
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+  }
 
-.about-header p {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
-.about-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-/* Glass card containers for text blocks */
-.about-card {
-  background: var(--bg-surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-slate-blue);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.about-card h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-}
-
-.about-card h2 span, .about-card h3 {
-  color: var(--accent-cyan);
-}
-
-.about-card h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.5px;
-}
-
-.about-card p {
-  color: #d1dbec;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-/* Split Grid for Mission and Vision */
-.about-grid {
-  display: flex;
-  gap: 2rem;
-}
-
-.about-grid .about-card {
-  flex: 1;
-}
-
-/* Staff Listing Rows */
-.staff-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.staff-member {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border-left: 3px solid var(--accent-electric);
-  border-radius: 4px;
-}
-
-.staff-name {
-  font-weight: 700;
-  color: var(--text-pure);
-}
-
-.staff-role {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-/* Responsive collapse for mobile devices */
-@media (max-width: 768px) {
-  .about-grid {
-    flex-direction: column;
+  .youtube-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
-/* Calendar Card Wrapper */
-.calendar-card {
-  flex: 1;
-  max-width: 550px;
+@media (max-width: 480px) {
+  .twitter-frame,
+  .instagram-frame {
+    height: 420px;
+    padding: 1rem;
+  }
+
+  .feed-header h2 {
+    font-size: 1.25rem;
+  }
 }
 
-.calendar-frame {
-  background: var(--bg-surface-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-slate-blue);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  height: 580px;
-  overflow-y: auto;
-}
-
-/* Event List Stack */
+/* =============================================
+   TEAM CALENDAR
+   ============================================= */
 .events-stack {
   display: flex;
   flex-direction: column;
@@ -632,6 +441,7 @@ body {
   border: 1px solid rgba(56, 139, 253, 0.05);
   border-radius: 8px;
   transition: all 0.2s ease;
+  gap: 0.75rem;
 }
 
 .event-item:hover {
@@ -640,12 +450,11 @@ body {
   transform: scale(1.01);
 }
 
-/* Badges & Tags */
 .event-meta {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  min-width: 90px;
+  min-width: 80px;
 }
 
 .team-tag {
@@ -668,21 +477,24 @@ body {
 }
 
 .type-badge.tournament { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
-.type-badge.scrim { background: rgba(234, 179, 8, 0.15); color: #eab308; }
+.type-badge.scrim      { background: rgba(234, 179, 8, 0.15); color: #eab308; }
 .type-badge.vod-review { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
-.type-badge.community { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
+.type-badge.community  { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
 
-/* Text Layout alignment */
 .event-details {
   flex: 1;
-  padding: 0 1.5rem;
+  padding: 0 0.75rem;
+  min-width: 0;
 }
 
 .event-details h3 {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-pure);
   margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .time-info {
@@ -691,14 +503,14 @@ body {
   gap: 0.4rem;
   font-size: 0.8rem;
   color: var(--text-muted);
+  flex-wrap: wrap;
 }
 
-/* Status Indicator Dots */
 .event-status {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  min-width: 85px;
+  min-width: 75px;
   justify-content: flex-end;
 }
 
@@ -706,6 +518,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .status-dot.upcoming {
@@ -713,37 +526,376 @@ body {
   box-shadow: 0 0 8px var(--accent-cyan);
 }
 
-.status-dot.pending {
-  background: #64748b;
-}
+.status-dot.pending { background: #64748b; }
 
 .status-text {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
-/* YouTube Card Wrapper */
-.youtube-card {
-  flex: 1;
-  max-width: 550px;
+/* Calendar — mobile adjustments */
+@media (max-width: 480px) {
+  .event-item {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .event-details {
+    padding: 0;
+    width: 100%;
+  }
+
+  .event-details h3 {
+    white-space: normal;
+    font-size: 0.85rem;
+  }
+
+  .event-meta {
+    flex-direction: row;
+    align-items: center;
+    min-width: unset;
+  }
+
+  .event-status {
+    min-width: unset;
+    margin-left: auto;
+  }
 }
 
-/* The video box frame */
-.youtube-frame {
+/* =============================================
+   ROSTER PAGE
+   ============================================= */
+.roster-page {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.roster-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.roster-header h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.roster-header h1 span {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-electric));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.roster-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.roster-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.roster-team-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.roster-team-heading h2 {
+  margin-bottom: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.roster-section h2 span { color: var(--accent-cyan); }
+
+.team-table-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.25));
+}
+
+.table-wrapper {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-slate-blue);
+  border-radius: 8px;
+  overflow: hidden;
+  overflow-x: auto; /* Allows horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch;
+}
+
+.roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 400px; /* Prevents columns from collapsing too much */
+}
+
+.roster-table th {
+  background: rgba(16, 26, 43, 0.9);
+  padding: 1.2rem 1.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-slate-blue);
+  white-space: nowrap;
+}
+
+.roster-table td {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid rgba(56, 139, 253, 0.05);
+  font-size: 1rem;
+}
+
+.roster-table tr.substitute td { opacity: 0.65; }
+
+.player-name {
+  font-weight: 700;
+  color: var(--text-pure);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.player-role { color: #d1dbec; }
+
+.status-tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.status-tag.starter {
+  background: rgba(0, 242, 254, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.05);
+}
+
+.status-tag.substitute {
+  background: rgba(143, 160, 186, 0.1);
+  color: var(--text-muted);
+  border: 1px solid rgba(143, 160, 186, 0.2);
+}
+
+.roster-table tbody tr:hover { background: rgba(56, 139, 253, 0.04); }
+
+/* Roster — mobile adjustments */
+@media (max-width: 768px) {
+  .roster-page {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .roster-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .roster-header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .roster-container {
+    gap: 2.5rem;
+  }
+
+  .roster-team-heading h2 {
+    font-size: 1.35rem;
+  }
+
+  .team-table-logo {
+    height: 36px;
+  }
+
+  .roster-table th,
+  .roster-table td {
+    padding: 0.9rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .roster-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .roster-header p {
+    font-size: 0.95rem;
+  }
+}
+
+/* =============================================
+   ABOUT PAGE
+   ============================================= */
+.about-page {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.about-header h1 span {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-electric));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-card {
   background: var(--bg-surface-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-slate-blue);
   border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  height: 315px; /* Keeps standard 16:9 widescreen proportions crisp */
-  overflow: hidden;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Make sure the internal iframe fills out the glass shell perfectly */
-.youtube-frame iframe {
-  border-radius: 8px;
+.about-card h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.about-card h2 span,
+.about-card h3 { color: var(--accent-cyan); }
+
+.about-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.about-card p {
+  color: #d1dbec;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.about-grid {
+  display: flex;
+  gap: 2rem;
+}
+
+.about-grid .about-card { flex: 1; }
+
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.staff-member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid var(--accent-electric);
+  border-radius: 4px;
+  gap: 1rem;
+}
+
+.staff-name {
+  font-weight: 700;
+  color: var(--text-pure);
+}
+
+.staff-role {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* About — mobile adjustments */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .about-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .about-grid {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .about-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .about-card p {
+    font-size: 0.97rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .staff-member {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .staff-role {
+    text-align: left;
+  }
 }

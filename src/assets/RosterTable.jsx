@@ -6,7 +6,7 @@ export default function Roster() {
   // Array data for AQ Main
   const mainRoster = [
     { name: "AQ // rhetti", role: "IGL/Flex", status: "Starter" },
-    { name: "AQ // Quiet", role: "Duelist/Ini", status: "Starter" },
+    { name: "AQ // ThxQuiet", role: "Duelist/Ini", status: "Starter" },
     { name: "AQ // Mik", role: "Controller", status: "Starter" },
     { name: "AQ // Suop", role: "Duelist", status: "Starter" },
     { name: "AQ // Tubeboy", role: "Sentinel", status: "Starter" },

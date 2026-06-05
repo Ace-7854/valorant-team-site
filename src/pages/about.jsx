@@ -14,7 +14,7 @@ export default function AboutPage() {
         <section className="about-card continuous-glow">
           <h2>OUR <span>STORY</span></h2>
           <p>
-            Founded with a passion for competitive excellence, Aquanticus emerged 
+            Founded, 12TH November, with a passion for competitive excellence, Aquanticus emerged 
             as a premier gaming organization dedicated to conquering the EU Valorant scene. 
             What began as a tight-knit squad of dedicated players has evolved into a 
             multi-roster powerhouse featuring both our advanced <strong>AQ Main</strong> lineup and our 
@@ -27,7 +27,7 @@ export default function AboutPage() {
           <div className="about-card">
             <h3>THE MISSION</h3>
             <p>We are a dedicated UK-based project focusing on individual improvement, team chemistry, 
-                and climbing the competitive, through premier, ladder together from the ground up.</p>
+                and climbing the competitive, through premier, ladder together from the ground up. Focused on developing a strong community for Competitive Play and Admiring Pros</p>
           </div>
           
           <div className="about-card">

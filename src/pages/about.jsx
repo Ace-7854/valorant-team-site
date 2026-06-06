@@ -46,12 +46,8 @@ export default function AboutPage() {
               <span className="staff-role">Founder</span>
             </div>
             <div className="staff-member">
-              <span className="staff-name">AQ // Rhetti</span>
-              <span className="staff-role">Team Manager / Coach / Lead</span>
-            </div>
-            <div className="staff-member">
-              <span className="staff-name">AQB // Haz</span>
-              <span className="staff-role">Assistant Coach / AQB Lead</span>
+              <span className="staff-name">AQ // rhetti</span>
+              <span className="staff-role">Director</span>
             </div>
           </div>
         </section>

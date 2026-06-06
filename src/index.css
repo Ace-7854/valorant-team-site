@@ -915,3 +915,95 @@ body {
     text-align: left;
   }
 }
+
+/* =============================================
+   QUOTE BOARD & CARDS
+   ============================================= */
+
+/* The grid container for all your quote cards */
+.quote-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
+  max-width: 1200px;
+  margin: 3rem auto 0 auto;
+  padding: 0 2rem;
+}
+
+/* Individual Quote Card Styling */
+.quote-card {
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-slate-blue);
+  border-radius: 10px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle accent glow on hover */
+.quote-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 242, 254, 0.1);
+}
+
+/* Optional decorative quotation mark background shadow */
+.quote-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgba(56, 139, 253, 0.03);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Main quote text styling */
+.quote-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-pure);
+  font-style: italic;
+  word-break: break-word; /* Prevents long words/strings from breaking layout */
+}
+
+/* Author tag styling */
+.quote-author {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-cyan);
+  align-self: flex-end; /* Aligns author to the bottom-right of the card */
+}
+
+/* =============================================
+   QUOTE BOARD — MOBILE RESPONSIVE
+   ============================================= */
+@media (max-width: 768px) {
+  .quote-board {
+    grid-template-columns: 1fr; /* Forces a single column on tablets/phones */
+    gap: 1.25rem;
+    padding: 0 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .quote-card {
+    padding: 1.25rem;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+  }
+}

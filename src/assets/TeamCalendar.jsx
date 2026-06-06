@@ -4,15 +4,6 @@ export default function TeamCalendar() {
   // Directly edit your schedule events right here!
   const events = [
     {
-      id: 1,
-      team: "AQ Blue",
-      type: "Tournament",
-      title: "SNS Tourney AQB V TACT1K",
-      date: "Friday, June 5",
-      time: "18:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
       id:0,
       team: "AQ Main",
       type: "Scrim",

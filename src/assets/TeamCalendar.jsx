@@ -4,30 +4,12 @@ export default function TeamCalendar() {
   // Directly edit your schedule events right here!
   const events = [
     {
-      id:0,
-      team: "AQ Main",
-      type: "Scrim",
-      title: "Scrim vs TBD",
-      date: "Saturday, June 6",
-      time: "17:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
       id: 2,
       team: "AQ Main",
       type: "Tournament",
       title: "SNS Tourney AQ V INVIGR-8 Esports",
       date: "Saturday, June 6",
       time: "18:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
-      id:0, 
-      team: "AQ Main",
-      type: "Scrim",
-      title: "Scrim vs TBD",
-      date: "Saturday, June 6",
-      time: "17:00 GMT +1",
       status: "Upcoming"
     },
     {
@@ -46,15 +28,6 @@ export default function TeamCalendar() {
       title: "SNS Tourney AQB V PRESA",
       date: "Sunday, June 7",
       time: "18:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
-      id: 0,
-      team: "AQ Main",
-      type: "Scrim",
-      title: "Scrim vs TBD",
-      date: "Monday, June 8",
-      time: "17:30 GMT +1",
       status: "Upcoming"
     },
     {

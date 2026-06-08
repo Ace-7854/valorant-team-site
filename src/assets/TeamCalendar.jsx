@@ -4,34 +4,16 @@ export default function TeamCalendar() {
   // Directly edit your schedule events right here!
   const events = [
     {
-      id: 2,
-      team: "AQ Main",
-      type: "Tournament",
-      title: "SNS Tourney AQ V INVIGR-8 Esports",
-      date: "Saturday, June 6",
-      time: "18:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
-      id: 0,
-      team: "AQ Main",
-      type: "premier",
-      title: "Premier:Haven",
-      date: "Sunday, June 7",
-      time: "18:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
-      id: 3,
+      id:0,
       team: "AQ Blue",
       type: "Tournament",
-      title: "SNS Tourney AQB V PRESA",
-      date: "Sunday, June 7",
+      title: "SNS Tourney AQ Blue V Team Crisis",
+      date: "Tuesday, June 9",
       time: "18:00 GMT +1",
       status: "Upcoming"
     },
     {
-      id: 4,
+      id: 1,
       team: "AQ Main",
       type: "Tournament",
       title: "SNS Tourney AQ V Cesium Esports",
@@ -39,12 +21,40 @@ export default function TeamCalendar() {
       time: "18:00 GMT +1",
       status: "Upcoming"
     },
+    
     {
-      id: 0,
+      id: 2,
       team: "AQ Main",
       type: "Tournament",
       title: "SNS Tourney AQ V Presa ACY",
       date: "Thursday, June 11",
+      time: "19:00 GMT +1",
+      status: "Upcoming"
+    },
+    {
+      id: 3,
+      team: "AQ Blue",
+      type: "Tournament",
+      title: "SNS Tourney AQ Blue V Ethereal",
+      date: "Friday, June 12",
+      time: "18:00 GMT +1",
+      status: "Upcoming"
+    },
+    {
+      id: 4,
+      team: "AQ Main",
+      type: "Premier",
+      title: "Fracture",
+      date: "Sunday, June 14",
+      time: "19:00 GMT +1",
+      status: "Upcoming"
+    },
+    {
+      id: 5,
+      team: "AQ Blue",
+      type: "Premier",
+      title: "Fracture",
+      date: "Sunday, June 14",
       time: "19:00 GMT +1",
       status: "Upcoming"
     }

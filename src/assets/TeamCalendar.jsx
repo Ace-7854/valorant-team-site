@@ -46,7 +46,7 @@ export default function TeamCalendar() {
       type: "Premier",
       title: "Fracture",
       date: "Sunday, June 14",
-      time: "19:00 GMT +1",
+      time: "18:00 GMT +1",
       status: "Upcoming"
     },
     {
@@ -55,7 +55,7 @@ export default function TeamCalendar() {
       type: "Premier",
       title: "Fracture",
       date: "Sunday, June 14",
-      time: "19:00 GMT +1",
+      time: "18:00 GMT +1",
       status: "Upcoming"
     }
   ];

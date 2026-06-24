@@ -5,60 +5,23 @@ export default function TeamCalendar() {
   const events = [
     {
       id:0,
-      team: "AQ Blue",
-      type: "Tournament",
-      title: "SNS Tourney AQ Blue V Team Crisis",
-      date: "Tuesday, June 9",
-      time: "18:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
-      id: 1,
       team: "AQ Main",
-      type: "Tournament",
-      title: "SNS Tourney AQ V Cesium Esports",
-      date: "Thursday, June 11",
+      type: "Scrim",
+      title: "ORG REWORK",
+      date: "Wednesday, June 24",
       time: "18:00 GMT +1",
       status: "Upcoming"
     },
-    
     {
-      id: 2,
-      team: "AQ Main",
-      type: "Tournament",
-      title: "SNS Tourney AQ V Presa ACY",
-      date: "Thursday, June 11",
-      time: "19:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
-      id: 3,
+      id:1,
       team: "AQ Blue",
-      type: "Tournament",
-      title: "SNS Tourney AQ Blue V Ethereal",
-      date: "Friday, June 12",
-      time: "18:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
-      id: 4,
-      team: "AQ Main",
-      type: "Premier",
-      title: "Fracture",
-      date: "Sunday, June 14",
-      time: "18:00 GMT +1",
-      status: "Upcoming"
-    },
-    {
-      id: 5,
-      team: "AQ Blue",
-      type: "Premier",
-      title: "Fracture",
-      date: "Sunday, June 14",
-      time: "18:00 GMT +1",
+      type: "Scrim",
+      title: "ORG REWORK",
+      date: "Wednesday, June 24",
+      time: "18:00 GMT +1", 
       status: "Upcoming"
     }
-  ];
+    ];
 
   return (
     <div className="calendar-card">

@@ -2,27 +2,27 @@ import React from 'react';
 import aqMainLogo from '../assets/images/AQ_MAIN_LOGO.png';
 import aqBlueLogo from '../assets/images/AQ_BLUE_LOGO.png';
 
-export default function Roster() {
+export default function RosterTable() {
   // Array data for AQ Main
   const mainRoster = [
-    { name: "AQ // rhetti", role: "IGL/Flex", status: "Starter" },
-    { name: "AQ // ThxQuiet", role: "Duelist/Ini", status: "Starter" },
+    { name: "AQ // Haz", role: "IGL/Initiator", status: "Starter" },
+    { name: "AQ // Sutads", role: "Duelist", status: "Starter" },
     { name: "AQ // Mik", role: "Controller", status: "Starter" },
-    { name: "AQ // Suop", role: "Duelist", status: "Starter" },
-    { name: "AQ // Tubeboy", role: "Sentinel", status: "Starter" },
-    { name: "AQ // Nightmare", role: "Flex", status: "Substitute" },
-    { name: "AQ // Kazemi", role: "Flex", status: "Substitute" },
+    { name: "AQ // Suop", role: "Sentinel", status: "Starter" },
+    { name: "AQ // Bostijger", role: "Flex", status: "Starter" },
+    { name: "AQ // Nihil", role: "Flex", status: "Substitute" },
+    { name: "AQ // rhetti", role: "Flex", status: "Substitute" },
   ];
 
   // Array data for AQ Blue
   const blueRoster = [
-    { name: "AQB // Haz", role: "IGL/Flex", status: "Starter" },
-    { name: "AQB // Rain", role: "Controller/Sentinel", status: "Starter" },
-    { name: "AQB // Ace", role: "Initiator/Controller", status: "Starter" },
-    { name: "AQB // Zino", role: "Sentinel/Controller", status: "Starter" },
-    { name: "AQB // Sutads", role: "Duelist", status: "Starter" },
-    { name: "AQB // BunBun", role: "Flex Sub", status: "Substitute" },
-    { name: "AQB // Ghost", role: "Duelist/Initiator Sub", status: "Substitute" },
+    { name: "AQB // El3ctrify", role: "IGL/Flex", status: "Starter" },
+    { name: "AQB // Rain", role: "Duelist", status: "Starter" },
+    { name: "AQB // Ace", role: "Initiator", status: "Starter" },
+    { name: "AQB // Shxguy", role: "Controller", status: "Starter" },
+    { name: "AQB // Evo", role: "Sentinel", status: "Starter" },
+    { name: "AQB // ThxQuiet", role: "Initiator Sub", status: "Substitute" },
+    { name: "AQB // Ghost", role: "Duelist/ControllerSub", status: "Substitute" },
   ];
 
   return (

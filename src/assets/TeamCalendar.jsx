@@ -5,19 +5,19 @@ export default function TeamCalendar() {
   const events = [
     {
       id:0,
-      team: "AQ Main",
-      type: "Scrim",
-      title: "ORG REWORK",
-      date: "Wednesday, June 24",
+      team: "AQ Blue",
+      type: "Premier",
+      title: "Sunset",
+      date: "Thursday, July 09",
       time: "18:00 GMT +1",
       status: "Upcoming"
     },
     {
       id:1,
-      team: "AQ Blue",
-      type: "Scrim",
-      title: "ORG REWORK",
-      date: "Wednesday, June 24",
+      team: "AQ Main",
+      type: "Premier",
+      title: "Sunset",
+      date: "Sunday, July 12",
       time: "18:00 GMT +1", 
       status: "Upcoming"
     }

@@ -5,20 +5,20 @@ export default function QuoteBoard() {
     return (
         <div className="quote-board">
             <QuoteCard quote="Went from vcl coach to coaching kids from Leeds." author="AQ // rhetti"/>
-            <QuoteCard quote="Suop op op doo op op" author="AQ // Suop" />
-            <QuoteCard quote="I'm a fun guy." author="AQ // Mik"/>
-            <QuoteCard quote="Inner peace comes through pain." author="AQ // ThxQuiet"/>
-            <QuoteCard quote="I like Tubes." author="AQ // Tubeboy"/>
-            <QuoteCard quote="I’m scared of dreams." author="AQ // Nightmare"/>
-            <QuoteCard quote="I'm here sometimes." author="AQ // Kazemi"/>
+            <QuoteCard quote="Introducing premier to the real val tech." author="AQ // "/>
+            <QuoteCard quote="The only person from leeds who can almost tell the time." author="AQ // Sutads"/>
+            <QuoteCard quote="Suop op op doo op" author="AQ // Suop"/>
+            <QuoteCard quote="Yo stfu please I need to hear." author="AQ // Bostijger"/>
+            <QuoteCard quote="You're disturbing my equilibrium." author="AQ // Mik"/>
+            <QuoteCard quote="Stare into the void and you'll see." author="AQ // Nihil"/>
 
-            <QuoteCard quote="I may work at nandos but I’ll butter your garlic bread anytime." author="AQB // Haz"/>
-            <QuoteCard quote="Rain is wet." author="AQB // Rain"/>
-            <QuoteCard quote="Ace? More like Ass.Because I'm an Absolute f****ng liability." author="AQB // Ace"/>
-            <QuoteCard quote="The Final Boss." author="AQB // Zino"/>
-            <QuoteCard quote="You have to be odd, to be number 1." author="AQB // Sutads"/>
-            <QuoteCard quote="If punctuality was a rank, i'd be hardstuck iron." author="AQB // BunBun"/>
-            <QuoteCard quote="Ghosts aren't real." author="AQB // Ghost"/>
+            <QuoteCard quote="I got mine. I think." author="AQB // El3ctrify"/>
+            <QuoteCard quote="If they need five to clear one, I've already won." author="AQB // Evo"/>
+            <QuoteCard quote="Whatever you lose, you'll find it again, but you throw away you'll never get back." author="AQB // Rain"/>
+            <QuoteCard quote="They call me 007. 0 kills, 0 assists, 7 deaths." author="AQB // Shxguy"/>
+            <QuoteCard quote="I don't need to be the best, I just need to be better than you." author="AQB // Ace"/>
+            <QuoteCard quote="Sometimes in life, you only have yourself to blame." author="AQB // ThxQuiet"/>
+            <QuoteCard quote="Ghosts don't exist." author="AQB // ghost"/>
         </div>
     );
 }

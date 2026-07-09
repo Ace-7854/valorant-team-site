@@ -11,7 +11,7 @@ export default function InstagramFeature() {
       <div className="instagram-frame">
         <iframe
           // Paste your specific post URL here, ensuring it ends with /embed/captioned/
-          src="https://www.instagram.com/p/DZLJT2HxCl1/embed/captioned/" 
+          src="https://www.instagram.com/p/Daf7X8QqNgD/embed/captioned/" 
           width="100%"
           height="540"
           frameBorder="0"

@@ -22,7 +22,7 @@ export default function RosterTable() {
     { name: "AQB // Shxguy", role: "Controller", status: "Starter" },
     { name: "AQB // Evo", role: "Sentinel", status: "Starter" },
     { name: "AQB // ThxQuiet", role: "Initiator Sub", status: "Substitute" },
-    { name: "AQB // Ghost", role: "Duelist/ControllerSub", status: "Substitute" },
+    { name: "AQB // Ghost", role: "Duelist/Controller Sub", status: "Substitute" },
   ];
 
   return (

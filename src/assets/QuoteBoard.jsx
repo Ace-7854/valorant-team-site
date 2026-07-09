@@ -5,7 +5,7 @@ export default function QuoteBoard() {
     return (
         <div className="quote-board">
             <QuoteCard quote="Went from vcl coach to coaching kids from Leeds." author="AQ // rhetti"/>
-            <QuoteCard quote="Introducing premier to the real val tech." author="AQ // "/>
+            <QuoteCard quote="Introducing premier to the real val tech." author="AQ // Haz"/>
             <QuoteCard quote="The only person from leeds who can almost tell the time." author="AQ // Sutads"/>
             <QuoteCard quote="Suop op op doo op" author="AQ // Suop"/>
             <QuoteCard quote="Yo stfu please I need to hear." author="AQ // Bostijger"/>
